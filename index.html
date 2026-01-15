@@ -30,8 +30,8 @@
                 <div class="timer" id="timer"></div>
             </div>
             <div class="game-content">
-                <div class="character-image">
-                    <img id="character-img" src="" alt="티니핑">
+                <div class="character-image" id="game-character-image">
+                    <!-- 이미지가 동적으로 생성됨 -->
                 </div>
                 <p class="question">이 티니핑의 이름은?</p>
                 <div class="choices" id="choices">
@@ -43,8 +43,8 @@
         <!-- 정답 화면 -->
         <div id="answer-screen" class="screen">
             <div id="answer-result" class="answer-result"></div>
-            <div class="character-image">
-                <img id="answer-img" src="" alt="티니핑">
+            <div class="character-image" id="answer-character-image">
+                <!-- 이미지가 동적으로 생성됨 -->
             </div>
             <p id="answer-description" class="answer-description"></p>
             <button class="btn btn-next" onclick="nextQuestion()">다음 문제</button>
