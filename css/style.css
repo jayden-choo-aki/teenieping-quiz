@@ -360,7 +360,7 @@ body {
 }
 
 /* 도감 상세 화면 */
-#detail-screen {
+#detail-screen.active {
     display: flex;
     justify-content: center;
     align-items: center;
