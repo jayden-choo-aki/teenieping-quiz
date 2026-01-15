@@ -445,15 +445,65 @@ body {
     color: white;
 }
 
-/* 반응형 */
+/* 터치 최적화 */
+.btn, .choice-btn, .back-btn, .collection-card {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+}
+
+/* 반응형 - 태블릿 */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .game-content {
+        padding: 20px;
+    }
+
+    .detail-card {
+        padding: 20px;
+    }
+}
+
+/* 반응형 - 모바일 */
 @media (max-width: 480px) {
     .title {
-        font-size: 36px;
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
     }
 
     .btn {
-        padding: 15px 25px;
+        padding: 16px 20px;
         font-size: 18px;
+    }
+
+    .game-header {
+        padding: 10px 12px;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .stars {
+        font-size: 18px;
+        order: 1;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .progress {
+        font-size: 16px;
+        order: 2;
+    }
+
+    .timer {
+        font-size: 16px;
+        order: 3;
     }
 
     .character-image {
@@ -464,5 +514,126 @@ body {
     .character-image img {
         max-width: 130px;
         max-height: 130px;
+    }
+
+    .question {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .choice-btn {
+        padding: 14px 16px;
+        font-size: 18px;
+    }
+
+    .answer-result {
+        font-size: 24px;
+    }
+
+    .answer-description {
+        font-size: 16px;
+    }
+
+    .result-title {
+        font-size: 28px;
+    }
+
+    .result-stars {
+        font-size: 32px;
+    }
+
+    .result-score {
+        font-size: 20px;
+    }
+
+    /* 도감 모바일 */
+    .collection-header {
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+    .collection-title {
+        font-size: 20px;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        max-height: 350px;
+    }
+
+    .collection-card {
+        padding: 8px;
+    }
+
+    .collection-card-image {
+        width: 55px;
+        height: 55px;
+    }
+
+    .collection-card-image img {
+        max-width: 45px;
+        max-height: 45px;
+    }
+
+    .collection-card-name {
+        font-size: 12px;
+    }
+
+    /* 상세 화면 모바일 */
+    .detail-image {
+        width: 140px;
+        height: 140px;
+        margin: 15px auto;
+    }
+
+    .detail-image img {
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    .detail-name {
+        font-size: 26px;
+    }
+
+    .detail-emotion {
+        font-size: 14px;
+        padding: 6px 16px;
+    }
+
+    .detail-description {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .btn-nav {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .back-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+}
+
+/* 반응형 - 아주 작은 화면 */
+@media (max-width: 360px) {
+    .title {
+        font-size: 28px;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .collection-card-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .detail-nav {
+        flex-direction: column;
     }
 }
